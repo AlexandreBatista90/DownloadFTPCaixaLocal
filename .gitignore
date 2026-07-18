@@ -2,14 +2,21 @@
 ConfigCredenciais.pas
 ConfigCredenciais.dfm
 
-# PASTAS DE BACKUP DO DELPHI
+# Executáveis e Batches
+*.bat
+*.exe
+
+# Pastas de Compilação do Delphi
+Win32/
+Win64/
 __history/
 __recovery/
 
-# ARQUIVOS COMPILADOS E TEMPORÁRIOS
+# Arquivos Temporários e de Configuração de Usuário
 *.dcu
-*.exe
-*.identcache
 *.local
+*.identcache
 *.stat
+*.projdata
 *.tvsconfig
+*.skincfg
