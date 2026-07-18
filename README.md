@@ -7,26 +7,32 @@ Aplicativo utilitário desenvolvido em **Delphi 12 CE** para otimizar o download
 Projeto feito para aprendizado e ao mesmo tempo auxiliar os técnicos de suporte da empresa. A ferramenta gerencia a comunicação de rede de forma assíncrona, proporcionando uma boa experiência de usuário.
 
 ##  Principais Funcionalidades
+
+* **Abertura do APP:** O sistema já inicia conectando ao servidor em segundo plano, economizando seu tempo de espera na tela inicial;
+ 
 * **Conexão Assíncrona (Threads):** Processo de conexão, listagem de diretórios e download de arquivos ocorrem em segundo plano. A interface nunca fica com o status de "Não Respondendo".
 
-* **Segurança e Trava de Acesso:** Exigência de credencial de suporte assim que o software é aberto, mascarando a aplicação para o usuário final, com bloqueio até a validação.
+* **Trava de Acesso:** Exigência de senha de suporte assim que o software é aberto, mascarando a aplicação para o usuário final, com bloqueio até a validação.
 
-* **Gestão Remota:** Permite a exclusão de arquivos obsoletos diretamente no servidor FTP através de atalho oculto de teclado (`Ctrl + Delete`), condicionado a validação de senha.
+* **Tratamento de falha de Download:** A aplicação tenta se reconectar caso tenha alguma falha de rede/internet/ftp. Após 5 tentativas pergunta se quer tentar novamente ou nao ; se sim, tenta mais 5 vezes. Se conseguir se reconectar, tenta continuar o download de onde parou;
+  
+* **Exclusão:** Permite a exclusão de arquivos obsoletos diretamente no servidor FTP através de atalho oculto de teclado (`Ctrl + Delete`), condicionado a validação de senha.
 
 * **Independência de DLLs:** A aplicação descompacta e consome as bibliotecas dinâmicas necessárias (OpenSSL) na pasta `TEMP` do Windows em tempo de execução, excluindo-as logo após o uso.
 
-* **Assinatura Digital (Post-Build):** Processo automatizado de assinatura via `signtool` no Delphi, evitando bloqueios de falsos positivos pelo Windows Defender / SmartScreen.
 
-## 🛠️ Tecnologias e Componentes
+
+
+##  Tecnologias e Componentes
 * **Linguagem:** Object Pascal / Delphi
 * **IDE:** Delphi 12 Community Edition
 * **Framework Visual:** VCL (Visual Component Library)
 * **Rede:** Protocolos baseados na biblioteca Indy (`TIdFTP`)
-* **Integração OS:** Manipulação de API do Windows para captura de diretórios e extração de versionamento de executável.
 
-## 🚀 Como Compilar
+
+##  Como Compilar
 1. Realize o clone deste repositório no seu ambiente local.
-2. Este repositório utiliza um arquivo `.gitignore` rígido. Para compilar, você precisará criar localmente a sua própria `UnitCredenciais.pas` declarando as constantes de Host, Login e Senha para o seu servidor.
+2. Este repositório utiliza um arquivo `.gitignore` rígido. Para compilar, você precisará criar localmente a sua própria `UnitCredenciais.pas` declarando as constantes de Host, Login e Senha para o seu servidor, podendo utilizar o 'ConfigCredenciais_Exemplo.pas' renomenaod para o nome correto.
 3. Abra o `.dproj` no Delphi 12 e execute o Build.
 
 ---
