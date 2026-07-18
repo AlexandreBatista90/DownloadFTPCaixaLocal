@@ -32,7 +32,7 @@ Projeto feito para aprendizado e ao mesmo tempo auxiliar os técnicos de suporte
 
 ##  Como Compilar
 1. Realize o clone deste repositório no seu ambiente local.
-2. Este repositório utiliza um arquivo `.gitignore` rígido. Para compilar, você precisará criar localmente a sua própria `UnitCredenciais.pas` declarando as constantes de Host, Login e Senha para o seu servidor, podendo utilizar o 'ConfigCredenciais_Exemplo.pas' renomenaod para o nome correto.
+2. Este repositório utiliza um arquivo `.gitignore` rígido. Para compilar, você precisará criar localmente a sua própria `UnitCredenciais.pas` declarando as constantes de Host, Login e Senha para o seu servidor, podendo utilizar o 'ConfigCredenciais_Exemplo.pas' renomeando para o nome correto.
 3. Abra o `.dproj` no Delphi 12 e execute o Build.
 
 ---
