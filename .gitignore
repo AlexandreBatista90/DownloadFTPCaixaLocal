@@ -1,0 +1,15 @@
+# ARQUIVO DE CREDENCIAIS (NUNCA SUBIR)
+ConfigCredenciais.pas
+ConfigCredenciais.dfm
+
+# PASTAS DE BACKUP DO DELPHI
+__history/
+__recovery/
+
+# ARQUIVOS COMPILADOS E TEMPORÁRIOS
+*.dcu
+*.exe
+*.identcache
+*.local
+*.stat
+*.tvsconfig
